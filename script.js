@@ -1,45 +1,53 @@
 gsap.registerPlugin(ScrollTrigger);
 
-// ScrollTrigger.config({
-//   autoRefreshEvents: "visibilitychange,DOMContentLoaded,load" // notice "resize" isn't in the list
-// });
-
 gsap.from(".square1", {duration:3, opacity: 0});
 gsap.from(".square2", {duration:3, opacity: 0});
-gsap.to(".logo", {
-  scrollTrigger: {
-    trigger: ".logo",
-    start: "top 30%",
-    toggleActions: "restart pause reverse pause",
-    scrub: 1,
-    pin: true,
-  },
-  xPercent: -85,
-  yPercent: -105,
-  scale: 0.3,
-});
+gsap.timeline()
+  .to(".logo", {
+    scrollTrigger: {
+     trigger: ".logo",
+      start: "top 29%",
+      end: "top 10%",
+      toggleActions: "restart pause reverse pause",
+      scrub: 1,
+      pin: true,
+    },
+    xPercent: -85,
+    yPercent: -80,
+    scale: 0.3,
+  })
+  .to(".logo", {
+    scrollTrigger: {
+      trigger: ".about",
+      start: "top 5%",
+      toggleActions: "play pause reverse pause",
+      scrub: true
+    },
+    opacity: 0
+  });
+
 
 gsap.to(".intro-name", {
   scrollTrigger: {
     trigger: ".intro-name",
-    start: "top 105%",
-    end: "top 85%",
+    start: "top 100%",
+    end: "top 70%",
     toggleActions: "restart pause reverse pause",
-    scrub: 1,
+    scrub: 1.5,
   },
-  y: -250,
+  y: -270,
   opacity: 1,
 });
 
 gsap.to(".intro-hook", {
   scrollTrigger: {
     trigger: ".intro-hook",
-    start: "top 105%",
-    end: "top 85%",
+    start: "top 100%",
+    end: "top 70%",
     toggleActions: "restart pause reverse pause",
-    scrub: 1,
+    scrub: 1.5,
   },
-  y: -240,
+  y: -260,
   opacity: 1,
 });
 
@@ -63,5 +71,6 @@ gsap.from(".skill-item", {
     toggleActions: "play none none none",
   },
   y: 500,
-  opacity: 0,      
+  opacity: 0,
+  stagger: 0.1    
 });
