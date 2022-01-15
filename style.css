@@ -1,0 +1,393 @@
+ /* ----------- Body ------------- */
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Barlow', sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+ /* ----------- Hero section ------------- */
+
+.hero {
+  background-color: #365577;
+  height: 150vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.intro-text {
+  text-align: center;
+  margin: 5vh 15vw;
+}
+
+.intro-name, .intro-hook {
+  color: #fff;
+  opacity: 0
+}
+
+ /* ----------- Logo ------------- */
+
+.logo {
+  background-color: #365577;
+  color: #fff;
+  height: 44vh;
+  width: 46vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 28vh;
+  left: 29vw;
+  z-index: 1;
+}
+
+.logo h1 {
+  font-family: 'Barlow';
+  font-size: 5vmin;
+}
+
+@keyframes rotate {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(180deg)}
+}
+
+.square1, .square2 {
+  border: 1px solid #fff;
+  height: 60vw;
+  position: absolute;
+  width: 60vw;
+}
+
+.square1 {
+  animation: rotate linear 4s infinite;
+}
+
+.square2 {
+  animation: rotate linear 4s infinite reverse;
+}
+
+ /* ----------- About section ------------- */
+
+.pre-divide {
+  background-color: #f78000;
+  height: 30px;
+  margin-top: 10vh;
+  position: relative;
+  float: right;
+  width: 70vw;
+}
+
+.pre-divide::after {
+  content: "";
+  height: 0px;
+  bottom: 0;
+  left: -15px;
+  width: 0;
+  position: absolute;
+  border-right: 15px solid #f78000;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.post-divide {
+  background-color: #f78000;
+  height: 30px;
+  margin-bottom: 10vh;
+  position: relative;
+  width: 70vw;
+}
+
+.post-divide::after {
+  content: "";
+  height: 0px;
+  bottom: 0;
+  right: -15px;
+  width: 0;
+  position: absolute;
+  border-left: 15px solid #f78000;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.about {
+  background-color: #fff;
+  color: #fff;
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about h2 {
+  margin-bottom: 5vh;
+}
+
+.about p {
+  width: 80vw;
+  text-align: justify;
+}
+
+ /* ----------- Portfolio Section ------------- */
+
+section.portfolio {
+  background-color: #edf9ff;
+  text-align: center;
+  padding: 0 5% 5%;
+}
+
+.portfolio > h2 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 2.2rem;
+  padding: 10% 0 10%;
+}
+
+.portfolio .flex-container-outer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.portfolio .flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center; 
+}
+
+.flex-container div {
+  text-align: justify;
+}
+
+.flex-container a {
+  background-color: rgba(0,0,0,0.8);
+  border-radius: 1px;
+  margin: 1px;
+  padding: 1px;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+  width: 95%;
+}
+
+.flex-container a img {
+  width: 100%;
+}
+
+.flex-container a:hover {
+  color: #fff;
+  text-decoration: underline;
+  transform: scale(1.1);
+  align-self: center;
+  justify-self: center;
+}
+
+.flex-container div {
+  margin: 3vh 0 8vh;
+}
+
+
+/* Skills -------------------------------------- */
+
+.skills {
+  background-color: #ed7d1a;
+  padding: 3% 0;
+  width: 100%;
+}
+
+.skills-title {
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: center;
+}
+
+.skills-container {
+  margin: 3% 0;
+  text-align: center;
+}
+
+.skills-container i {
+  margin: 20px;
+}
+
+/* Contact Section ----------------------------- */
+
+section.contact {
+  margin: 5%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h2 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 2.2rem;
+}
+
+.contact .social-media-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-media-icons a {
+  color: #5b15ab;
+  cursor: pointer;
+  margin: 5%;
+  transition: transform 0.1s ease-in;
+}
+
+.social-media-icons a:hover {
+  transform: scale(1.1);
+}
+
+.contact form {
+  background-color: #edf9ff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0;
+  padding: 10px;
+  text-align: left;
+  width: 90%;
+}
+
+.contact form input {
+  margin: 5px 0 10px;
+  height: 30px;
+  padding: 1%;
+}
+
+.contact form input[type='submit'] {
+  background-color: transparent;
+  border: 1px solid #ed7d1a;
+  color: #ed7d1a;
+}
+
+.contact form input[type='submit']:hover {
+  background-color: #ed7d1a;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Copyright Section --------------------------- */
+
+.copyright {
+  background-color: #365577;
+  color: #fff;
+  padding: 1px;
+  text-align: center;
+}
+
+/* Media Queries ------------------------------ */
+
+@media(min-width: 750px) {
+
+  p {font-size: 1.4rem;}
+
+  .hero {height: 150vh;}
+
+  .logo h1 {font-size: 4vmin;}
+
+  .square1, .square2 {
+    height: 45vw;
+    width: 45vw;
+  }
+  
+  .intro-text {margin: 13vh 25vw;}
+
+  .about {height: 60vh;}
+
+  .about p {width: 60%;}
+
+  .flex-container-outer  {width: 65vw;}
+
+  section.contact {
+    margin: auto;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    width: 65vw;
+  }
+
+}
+
+@media(min-width: 1000px) {
+
+  .logo h1 {font-size: 3vmin;}
+
+  .square1, .square2 {
+    height: 35vw;
+    width: 35vw;
+  }
+
+  .intro-text {margin: 20vh 25vw;}
+
+  .about {height: 50vh;}
+
+  .about p {font-size: 1.2rem;}
+
+  .portfolio .flex-container-outer {
+    width: 90vw;
+    }
+
+  .portfolio .flex-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 3vh 0;
+  }
+
+  .flex-container a {
+    height: 100%;
+    margin-right: 5%;
+    width: inherit;
+  }
+
+  .flex-container a img {width: 320px;}
+
+  .flex-container div {
+    flex-basis: 120%;
+    margin: 0;
+  }
+
+}
+
+@media(min-width: 1300px) {
+
+  .logo h1 {font-size: 2.5vmin;}
+
+  .square1, .square2 {
+    height: 25vw;
+    width: 25vw;
+  }
+
+  .intro-text {margin: 20vh 35vw;}
+
+  .about {
+    width: 80vw;
+  }
+
+  .portfolio .flex-container-outer {width: 60vw;}
+
+  .flex-container div {
+    flex-basis: 100%;
+  }
+}
