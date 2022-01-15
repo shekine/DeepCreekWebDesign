@@ -55,28 +55,6 @@ gsap.to("section.about", {
   }
 });
 
-gsap.from(".pre-divide", {
-  scrollTrigger: {
-    trigger: ".hero",
-    start: "bottom 30%",
-    end: "bottom 0%",
-    toggleActions: "restart pause reverse pause",
-    scrub: 1,
-  },
-  opacity: 0,
-});
-
-gsap.from(".post-divide", {
-  scrollTrigger: {
-    trigger: ".hero",
-    start: "bottom 30%",
-    end: "bottom 0%",
-    toggleActions: "restart pause reverse pause",
-    scrub: 1,
-  },
-  opacity: 0,
-});
-
 gsap.from(".skill-item", {
   scrollTrigger: {
     trigger: ".skills",
