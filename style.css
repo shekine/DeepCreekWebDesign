@@ -376,13 +376,15 @@ section.contact {
 
   .square1, .square2 {
     height: 25vw;
+
+    5
     width: 25vw;
   }
 
   .intro-text {margin: 20vh 35vw;}
 
-  .about {
-    width: 80vw;
+  .about p {
+    width: 60vw;
   }
 
   .portfolio .flex-container-outer {width: 60vw;}
